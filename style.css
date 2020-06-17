@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+} /*Adding the reset code*/
 h1 {
     font-family: 'Comfortaa', cursive;
     font-size: 22px;
