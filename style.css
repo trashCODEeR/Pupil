@@ -1,0 +1,29 @@
+h1 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 999;
+    text-align: center;
+    text-decoration: underline;
+}
+h2 {
+    font-family: 'Comfortaa', cursive;
+    font-style: normal;
+    text-align: center;
+    text-decoration: underline;
+}
+ul {
+    text-align: center;
+}
+ol {
+
+}
+p {
+    color: #4C6CE9;
+    text-indent: 30px;
+    text-transform: capitalize;
+    line-height
+}
+div bios {
+    text-align: center;
+}
