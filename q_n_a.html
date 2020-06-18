@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <title>Questions and Answers</title>
+    </head>
+    <body>
+        <p>What is your question?</p>
+        <input type="text">
+        <div id="contact-form" class="clearfix">
+
+<form method=POST action="mailto:liangalan101@gmail.com" enctype="text/plain">
+<label for="name">Name:</label>
+<br>
+<input type="text" name="Name" id="name" placeholder="Your Name">
+<br>
+<label for="email">Email:</label>
+<br>
+<input type="email" name="email" id="email" placeholder="yourusername@example.com">
+<br>
+<input type="submit" name="Submit">
+<br>
+</form>
+<form method="GET" action="mailto:liangalan101@gmail.com" enctype="text/plain">
+    <div>Subject</div>
+    <input type="text" name="subject" />
+
+    <div>Message</div>
+    <textarea name="body"></textarea>
+
+    <br/>
+    <input type="submit" value="Send" />
+</form>
+    </body>
+</html>
