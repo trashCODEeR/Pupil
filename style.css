@@ -10,13 +10,14 @@ h1 {
     text-align: center;
     text-decoration: underline;
     line-height: 80px;
-    color: #0BD966;
+    color: #82E085;
 }
 h2 {
     font-family: 'Comfortaa', cursive;
     font-style: normal;
     text-align: center;
     text-decoration: underline;
+    color: #C20401;
 }
 h3 {
     font-family: 'Comfortaa', cursive;
@@ -30,17 +31,18 @@ h4 {
     text-align: center;
     text-decoration: underline;
 }
+.headers {
+    font-size: 24px;
+    line-height: 40px;
+}
 ul {
     text-align: center;
 }
 p {
-    color: #33DB4D;
+    font-family: 'Comfortaa', cursive;
+    color: #FA8E00;
     text-indent: 30px;
-    text-transform: capitalize;
-    line-height
-}
-p#promise {
-    text-align: center;
+    line-height: 20px;
 }
 .Bios {
     text-align: center;
@@ -59,21 +61,30 @@ button#Apps {
 }
 /*Background image*/
 body {
-    background-color: #ED4B0C;
+    background-color: #0F9899;
+    background-image: url('computer_image.jpg');
+    background-size: cover;
 }
-div#about_us {
-    background: url('https://th.bing.com/th/id/OIP.ITXMtr9xjrzJZhEbebb1YQHaE8?pid=Api&rs=1');
-    background-size: 100;
-    font-size: 500%;
-    line-height: 2;
-}
+
 div#Title {
-    background-color: blue;
+    background-color: #10044A;
 }
 p#promise {
+    text-align: center;
     font-family: 'Comfortaa', cursive;
+    color: yellow;
+    line-height: 200%;
+    font-size: 50px;
+}
+p#F_A_Q {
+    text-decoration: underline;
+    font-size: 24px;
 }
 button {
     border-radius: 15px;
-    padding: 2%;
+    padding: 1.5%;
+    font-size: 120%;
+}
+button#home {
+    background-color: #0EE01F;
 }
