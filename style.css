@@ -1,16 +1,30 @@
 * {
-  margin: 0;
-  padding: 0;
-} /*Adding the reset code*/
+    margin: 0;
+    padding: 0;
+}/*reset code*/
 h1 {
-    font-family: 'Comfortaa', cursive;
-    font-size: 22px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
     font-style: normal;
-    font-weight: 999;
+    font-weight: 999px;
+    text-align: center;
+    text-decoration: underline;
+    line-height: 80px;
+    color: #0BD966;
+}
+h2 {
+    font-family: 'Comfortaa', cursive;
+    font-style: normal;
     text-align: center;
     text-decoration: underline;
 }
-h2 {
+h3 {
+    font-family: 'Comfortaa', cursive;
+    font-style: normal;
+    text-align: center;
+    text-decoration: underline;
+}
+h4 {
     font-family: 'Comfortaa', cursive;
     font-style: normal;
     text-align: center;
@@ -20,21 +34,46 @@ ul {
     text-align: center;
 }
 p {
-    color: #4C6CE9;
+    color: #33DB4D;
     text-indent: 30px;
     text-transform: capitalize;
     line-height
 }
-div bios {
+p#promise {
     text-align: center;
 }
-/*ol#products li#first_product{
-    color: #FA2818;
+.Bios {
+    text-align: center;
 }
-ol #products li#second_product {
-    color: #29FA51;
+button#Apps {
+    text-align: center;
+    line-height: 20px;
 }
-ol #products li#third_product {
-    color: #F08A1B;
+.Apps {
+    text-align: center;
+    line-height: 5;
+    padding: 5;
 }
-These are the changes*/
+.images {
+    text-align: center;
+}
+/*Background image*/
+body {
+    background-color: #ED4B0C;
+}
+div#about_us {
+    background: url('https://th.bing.com/th/id/OIP.ITXMtr9xjrzJZhEbebb1YQHaE8?pid=Api&rs=1');
+    background-size: 100;
+    font-size: 500%;
+    line-height: 2;
+}
+div#Title {
+    background-color: blue;
+}
+p#promise {
+    font-family: 'Comfortaa', cursive;
+}
+button {
+    border-radius: 15px;
+    padding: 2%;
+}
