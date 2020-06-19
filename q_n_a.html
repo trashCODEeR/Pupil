@@ -3,103 +3,123 @@
     <head>
         <meta charset='utf-8'>
         <title>Questions and Answers</title>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+        <style>
+            form.input_form {
+                display: table;
+            }
+
+            div.name {
+                display: table-row;
+            }
+
+            div.email {
+                display: table-row;
+            }
+
+            div.question {
+                display: table-row;
+            }
+
+            label,
+            input {
+                display: table-cell;
+                margin-bottom: 10px;
+                color: red;
+            }
+
+            label {
+            }
+
+            .buttons {
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
+                border-radius: 0px;
+                color: #00E2FF;
+                font-family: Open Sans;
+                font-size: 26px;
+                font-weight: 100;
+                background-color: #000000;
+                box-shadow: 1px 1px 20px 0px #000000;
+                -webkit-box-shadow: 1px 1px 20px 0px #000000;
+                -moz-box-shadow: 1px 1px 20px 0px #000000;
+                text-shadow: 1px 1px 20px #000000;
+                border: solid #00E2FF 7px;
+                text-decoration: none;
+                display: inline-block;
+                cursor: pointer;
+                text-align: center;
+            }
+
+            .buttons:hover {
+                background: #00E2FF;
+                border: solid #00E2FF 5px;
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
+                border-radius: 0px;
+                text-decoration: none;
+            }
+            body {
+                background-image: url('question_mark_image.jpg');
+                background-size: cover;
+            }
+            .submit_button {
+                border: solid #00E2FF 5px;
+                background-color: black;
+                color: #00E2FF;
+                font-size: 20px;
+                box-shadow: 1px 1px 20px 0px #000000;
+                -webkit-box-shadow: 1px 1px 20px 0px #000000;
+                -moz-box-shadow: 1px 1px 20px 0px #000000;
+                text-shadow: 1px 1px 20px #000000;
+                text-decoration: none;
+                display: inline-block;
+                cursor: pointer;
+                text-align: center;
+            }
+            .submit_button:hover {
+                border: solid yellow 8px;
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
+                border-radius: 0px;
+                text-decoration: none;
+                color: yellow;
+            }
+            .query {
+                height: 100px;
+            }
+            .return_value {
+                color: yellow;
+            }
+        </style>
     </head>
     <body>
-        <p>What is your question?</p>
-        <input type="text">
-        <div id="contact-form" class="clearfix">
-
-<form method=POST action="mailto:liangalan101@gmail.com" enctype="text/plain">
-<label for="name">Name:</label>
-<br>
-<input type="text" name="Name" id="name" placeholder="Your Name">
-<br>
-<label for="email">Email:</label>
-<br>
-<input type="email" name="email" id="email" placeholder="yourusername@example.com">
-<br>
-<input type="submit" name="Submit">
-<br>
-</form>
-<form method="GET" action="mailto:liangalan101@gmail.com" enctype="text/plain">
-    <div>Subject</div>
-    <input type="text" name="subject" />
-
-    <div>Message</div>
-    <textarea name="body"></textarea>
-
-    <br/>
-    <input type="submit" value="Send" />
-</form>
-    </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset='utf-8'>
-        <title>Questions and Answers</title>
-    </head>
-    <body>
-        <!-- <p>What is your question?</p>
-        <input type="text">
-        <div id="contact-form" class="clearfix">
-
-<form method=POST action="mailto:liangalan101@gmail.com" enctype="text/plain">
-<label for="name">Name:</label>
-<br>
-<input type="text" name="Name" id="name" placeholder="Your Name">
-<br>
-<label for="email">Email:</label>
-<br>
-<input type="email" name="email" id="email" placeholder="yourusername@example.com">
-<br>
-<input type="submit" name="Submit">
-<br>
-</form>
-<form method="GET" action="mailto:liangalan101@gmail.com" enctype="text/plain">
-    <div>Subject</div>
-    <input type="text" name="subject" />
-
-    <div>Message</div>
-    <textarea name="body"></textarea>
-
-    <br/>
-    <input type="submit" value="Send" />
-</form> -->
-    <script src='main.js'></script>
-    <p id='F_A_Q'>Where are you currently making your products? <br>
-Answer: We have an office facility in New York. <br>
-What will you use my investment for? <br>
-Answer: Access more schools, increase our sales, go worldwide, and create more extensions if possible. <br>
-Do you currently have any sales? <br>
-Answer: We have a chart that illustrates our sales since the beginning of our company. <br>
-Do you currently have any other patents or businesses? <br>
-Answer: No. However, we plan to after we get your investment if you allow of course. <br>
-Are you going to sell online or in brick and mortars(physical shops)? <br>
-Answer: Our plan is to advertise our products online. We will display a video of a teacher who is struggling to equally divert <br> her attention from her NetOp app and her mini-group lesson. Then an ad will appear on her computer screen and she will see <br> herself using our app. In the end, we will spin into the screen and present a video that describes the problem, solution, <br> and how we came up with this solution. <br>
-What are your profit margins? <br>
-Answer: 100% profit margin (Highest possible is 99.99%(Ask Vaibhav for reasons why)) <br>
-How do you plan on advertising your product? <br>
-Answer: via social media.  Our plan is to advertise our products online. We will display a video of a teacher who is struggling <br> to equally divert her attention from her NetOp app and her mini-group lesson. Then an ad will appear on her computer screen <br> and she will see herself using our app. In the end, we will spin into the screen and present a video that describes the <br> problem, solution, and how we came up with this solution. <br>
-What was the most challenging task you faced as an inventor? <br>
-Answer: Trying to make our product unique- We knew that there was already NetOp and probably another hundred other student <br> vision apps. After some discussion, we came up with Pupil. “See all, know all.” <br>
-What is unique about your company? <br>
-Answer: We did not just monitor students’ screens, we are also constantly checking students’ history, and we send messages to <br> the teacher at the first sight of trouble (31+ seconds or any activity on any website, we send a message to the teacher, <br> and if the teacher agrees, we send a message to the parent automatically!) <br>
-What big problem does this solve? <br>
-Answer: We just stopped hundreds of students from not focusing in class and going on websites that they are not supposed to be <br> on. We also stopped the fact that teachers have to divert some of their attention to their NetOp and just gave them the <br> ability to divert ALL of their attention to their lesson. <br>
-What age demographic would be your primary market? <br>
-Answer: We are trying to appeal to teachers and principals nationwide. <br>
-What have you learned from this experience? <br>
-Answer: You can always improve what already exists in front of you. <br>
-Part A: Do you have any competition? <br>
-Answer: NetOp Student Vision <br>
-Part B: If so, what advantage do you have over them? <br>
-Answer: We have a stronger security system than our opponents.	We automatically report any activity, and we block websites with <br> no password. Only the teacher can go through a two-step authorization feature. The first step is a pin and the second step <br> is a personal question but the good thing is that we do not collect any personal info. <br>
-Additional Questions: <br>
-How did you think of this app? <br>
-Answer: We thought of problems and their solutions. After a while, we came up with Pupil. <br>
-</p>
-<button><a href="pupil.html">Back to Homepage</a></button>
+        <script src="main.js"></script>
+        <div class='question'>
+            <form action="" method="get" class="input_form">
+                <div class="name">
+                    <label for="name">Enter your name: </label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="email">
+                    <label for="email">Enter your email: </label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class='question'>
+                    <label for="question">Enter your question:</label>
+                    <input class='query' type="question" name='question' id='question' required>
+                </div>
+                <div class='submit'>
+                    <input class='submit_button' type="submit" value='Submit your question!' onclick='myFunction()'>
+                </div>
+            </form>
+        </div>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="apps.html">Apps</a>
+            <a href="contact_info.html">Contact</a>
+        </div>
     </body>
 </html>
