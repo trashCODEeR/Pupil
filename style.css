@@ -76,10 +76,6 @@ p {
     border-radius: 0px;
     text-decoration: none;
 }
-button#Apps {
-    text-align: center;
-    line-height: 20px;
-}
 .Apps {
     text-align: center;
     line-height: 5;
@@ -105,18 +101,6 @@ p#promise {
     line-height: 200%;
     font-size: 50px;
 }
-p#F_A_Q {
-    text-decoration: underline;
-    font-size: 24px;
-}
-button {
-    border-radius: 15px;
-    padding: 1.5%;
-    font-size: 120%;
-}
-button#home {
-    background-color: #0EE01F;
-}
 div#Title {
     text-align: center;
 }
@@ -127,7 +111,100 @@ div#second {
 p#about_us {
     line-height: 1.5;
 }
+/*Navbar at the top*/
 .contact_info {
-    background-image: url('https://www.pexels.com/photo/apps-blur-button-close-up-267350/');
+    background-image: url('get_in_contact.jpg');
     background-size: cover;
 }
+/* Place the navbar at the bottom of the page, and make it stick */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+nav {
+  width: 100%;
+  margin: 20px 0; }
+nav ul {
+  list-style: none;
+  overflow: hidden; }
+nav ul li {
+  float: left;
+  width: 20%; }
+nav ul li a {
+  text-align: center;
+  padding: 8px 0;
+  display: block;
+  width: 100%;
+  background: #cdeb8e; /* Old browsers */
+  background: -moz-linear-gradient(top,
+    #cdeb8e 0%, #b0ca34 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom,
+    color-stop(0%,#cdeb8e),
+    color-stop(100%,#b0ca34)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,
+    #cdeb8e 0%,#b0ca34 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,
+    #cdeb8e 0%,#b0ca34 100%); /* Opera 11.10+ */
+  background: linear-gradient(to bottom,
+    #cdeb8e 0%,#b0ca34 100%); /* W3C, IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(
+    startColorstr=’#cdeb8e’,
+    endColorstr=’#b0ca34′,GradientType=0 ); /* IE6-9 */
+  }
+nav ul li a,
+nav ul li a:focus,
+nav ul li a:visited,
+nav ul li a:hover,
+nav ul li a:active {
+  color: #000;
+  text-decoration: none; }
+nav ul li a:hover,
+nav ul li a:active {
+  background: #b0ca34; /* Old browsers */
+  background: -moz-linear-gradient(top,
+    #b0ca34 0%, #96c40d 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom,
+    color-stop(0%,#b0ca34),
+    color-stop(100%,#96c40d)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,
+    #b0ca34 0%,#96c40d 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,
+    #b0ca34 0%,#96c40d 100%); /* Opera 11.10+ */
+  background: linear-gradient(to bottom,
+    #b0ca34 0%,#96c40d 100%); /* W3C, IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(
+    startColorstr=’#b0ca34′,
+    endColorstr=’#96c40d’,GradientType=0 ); /* IE6-9 */
+  }
+nav ul li:first-child a {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px; }
+nav ul li:last-child a {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px; }
