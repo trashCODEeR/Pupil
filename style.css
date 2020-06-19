@@ -47,6 +47,35 @@ p {
 .Bios {
     text-align: center;
 }
+.buttons {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    color: #00E2FF;
+    font-family: Open Sans;
+    font-size: 26px;
+    font-weight: 100;
+    padding: 15px;
+    background-color: #000000;
+    box-shadow: 1px 1px 20px 0px #000000;
+    -webkit-box-shadow: 1px 1px 20px 0px #000000;
+    -moz-box-shadow: 1px 1px 20px 0px #000000;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #00E2FF 7px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.buttons:hover {
+    background: #000000;
+    border: solid #00E2FF 5px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    text-decoration: none;
+}
 button#Apps {
     text-align: center;
     line-height: 20px;
@@ -60,7 +89,7 @@ button#Apps {
     text-align: center;
 }
 /*Background image*/
-body {
+div#main {
     background-color: #0F9899;
     background-image: url('computer_image.jpg');
     background-size: cover;
@@ -72,7 +101,7 @@ div#Title {
 p#promise {
     text-align: center;
     font-family: 'Comfortaa', cursive;
-    color: yellow;
+    color: green;
     line-height: 200%;
     font-size: 50px;
 }
@@ -87,4 +116,17 @@ button {
 }
 button#home {
     background-color: #0EE01F;
+}
+div#Title {
+    text-align: center;
+}
+div#second {
+    background: url('multi_desktop_image.jpg');
+    background-size: cover;
+}
+p#about_us {
+    line-height: 1.5;
+}
+.contact_info {
+    background-image: url('https://www.pexels.com/photo/apps-blur-button-close-up-267350/');
 }
