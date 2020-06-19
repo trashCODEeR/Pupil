@@ -129,4 +129,5 @@ p#about_us {
 }
 .contact_info {
     background-image: url('https://www.pexels.com/photo/apps-blur-button-close-up-267350/');
+    background-size: cover;
 }
