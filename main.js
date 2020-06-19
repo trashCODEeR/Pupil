@@ -1,1 +1,3 @@
-let problem = prompt('What is your question?')
+function myFunction() {
+    alert('Your question has been submited!');
+}
