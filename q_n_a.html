@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <title>Questions and Answers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        form.input_form {
+            display: table;
+        }
+
+        div.name {
+            display: table-row;
+        }
+
+        div.email {
+            display: table-row;
+        }
+
+        div.question {
+            display: table-row;
+        }
+
+        label,
+        input {
+            display: table-cell;
+            margin-bottom: 10px;
+            color: red;
+        }
+
+        label {}
+
+        .buttons {
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            color: #00E2FF;
+            font-family: Open Sans;
+            font-size: 26px;
+            font-weight: 100;
+            background-color: #000000;
+            box-shadow: 1px 1px 20px 0px #000000;
+            -webkit-box-shadow: 1px 1px 20px 0px #000000;
+            -moz-box-shadow: 1px 1px 20px 0px #000000;
+            text-shadow: 1px 1px 20px #000000;
+            border: solid #00E2FF 7px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .buttons:hover {
+            background: #00E2FF;
+            border: solid #00E2FF 5px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: cornsilk;
+        }
+
+        .submit_button {
+            border: solid #00E2FF 5px;
+            background-color: black;
+            color: #00E2FF;
+            font-size: 20px;
+            box-shadow: 1px 1px 20px 0px #000000;
+            -webkit-box-shadow: 1px 1px 20px 0px #000000;
+            -moz-box-shadow: 1px 1px 20px 0px #000000;
+            text-shadow: 1px 1px 20px #000000;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .submit_button:hover {
+            border: solid red 8px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            text-decoration: none;
+            color: #2822DB;
+        }
+
+        .query {
+            height: 100px;
+        }
+
+        .return_value {
+            color: yellow;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .wrap {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button {
+            min-width: 300px;
+            min-height: 60px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+            font-weight: 700;
+            color: #313133;
+            background: #4FD1C5;
+            background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
+            border: none;
+            border-radius: 1000px;
+            box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
+            transition: all 0.3s ease-in-out 0s;
+            cursor: pointer;
+            outline: none;
+            position: relative;
+            padding: 10px;
+        }
+
+        button::before {
+            content: '';
+            border-radius: 1000px;
+            min-width: calc(300px + 12px);
+            min-height: calc(60px + 12px);
+            border: 6px solid #00FFCB;
+            box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all .3s ease-in-out 0s;
+        }
+
+        .button:hover,
+        .button:focus {
+            color: #313133;
+            transform: translateY(-6px);
+        }
+
+        button:hover::before,
+        button:focus::before {
+            opacity: 1;
+        }
+
+        button::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            border: 6px solid #00FFCB;
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: ring 1.5s infinite;
+        }
+
+        button:hover::after,
+        button:focus::after {
+            animation: none;
+            display: none;
+        }
+
+        @keyframes ring {
+            0% {
+                width: 30px;
+                height: 30px;
+                opacity: 1;
+            }
+
+            100% {
+                width: 300px;
+                height: 300px;
+                opacity: 0;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* basic stylings ------------------------------------------ */
+        body {
+            background: url(https://scotch.io/wp-content/uploads/2014/07/61.jpg);
+        }
+
+        .container {
+            font-family: 'Roboto';
+            width: 600px;
+            margin: 30px auto 0;
+            display: block;
+            background: #FFF;
+            padding: 10px 50px 50px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h2 small {
+            font-weight: normal;
+            color: #888;
+            display: block;
+        }
+
+        .footer {
+            text-align: center;
+        }
+
+        .footer a {
+            color: #53B2C8;
+        }
+
+        /* form starting stylings ------------------------------- */
+        .group {
+            position: relative;
+            margin-bottom: 45px;
+        }
+
+        input {
+            font-size: 18px;
+            padding: 10px 10px 10px 5px;
+            display: block;
+            width: 300px;
+            border: none;
+            border-bottom: 1px solid #757575;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        /* LABEL ======================================= */
+        label {
+            color: #999;
+            font-size: 18px;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            left: 5px;
+            top: 10px;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+        }
+
+        /* active state */
+        input:focus~label,
+        input:valid~label {
+            top: -20px;
+            font-size: 14px;
+            color: #5264AE;
+        }
+
+        /* BOTTOM BARS ================================= */
+        .bar {
+            position: relative;
+            display: block;
+            width: 300px;
+        }
+
+        .bar:before,
+        .bar:after {
+            content: '';
+            height: 2px;
+            width: 0;
+            bottom: 1px;
+            position: absolute;
+            background: #5264AE;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+        }
+
+        .bar:before {
+            left: 50%;
+        }
+
+        .bar:after {
+            right: 50%;
+        }
+
+        /* active state */
+        input:focus~.bar:before,
+        input:focus~.bar:after {
+            width: 50%;
+        }
+
+        /* HIGHLIGHTER ================================== */
+        .highlight {
+            position: absolute;
+            height: 60%;
+            width: 100px;
+            top: 25%;
+            left: 0;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        /* active state */
+        input:focus~.highlight {
+            -webkit-animation: inputHighlighter 0.3s ease;
+            -moz-animation: inputHighlighter 0.3s ease;
+            animation: inputHighlighter 0.3s ease;
+        }
+
+        /* ANIMATIONS ================ */
+        @-webkit-keyframes inputHighlighter {
+            from {
+                background: #5264AE;
+            }
+
+            to {
+                width: 0;
+                background: transparent;
+            }
+        }
+
+        @-moz-keyframes inputHighlighter {
+            from {
+                background: #5264AE;
+            }
+
+            to {
+                width: 0;
+                background: transparent;
+            }
+        }
+
+        @keyframes inputHighlighter {
+            from {
+                background: #5264AE;
+            }
+
+            to {
+                width: 0;
+                background: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script src='main.js'></script>
+    <!-- Our nav buttons -->
+    <ul class='buttons-perspective'>
+        <li><a href="index.html">Home</a></li>
+        <li><a href='apps.html'>Products</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact_info.html">Contact</a></li>
+        <li><a href="q_n_a.html">Questions and Answers</a></li>
+    </ul>
+    <!-- The end of the nav buttons -->
+
+    <h2>Question submit form <svg class="bi bi-question-square-fill" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm4.57 6.033H5.25C5.22 4.147 6.68 3.5 8.006 3.5c1.397 0 2.673.73 2.673 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.355H7.117l-.007-.463c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.901 0-1.358.603-1.358 1.384zm1.251 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z" />
+        </svg></h2>
+
+    <form>
+
+        <div class="group">
+            <input type="text" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Name</label>
+        </div>
+
+        <div class="group">
+            <input type="text" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Email</label>
+        </div>
+
+        <div class="group">
+            <input type="text" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Question</label>
+        </div>
+
+    </form>
+
+    <p class="footer">
+    </p>
+
+    </div>
+    <div class="wrap"> <button class="button" onclick="submited()">Submit</button> </div>
+    <div id="container">
+</body>
+
+</html>

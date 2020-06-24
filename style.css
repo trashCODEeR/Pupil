@@ -1,0 +1,670 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*reset code*/
+body
+{
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+} /*Disabling the scrollbar*/
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 999px;
+    text-align: center;
+    text-decoration: underline;
+    line-height: 80px;
+    color: #82E085;
+}
+
+h2 {
+    font-family: 'Comfortaa', cursive;
+    font-style: normal;
+    text-align: center;
+    text-decoration: underline;
+    color: #C20401;
+}
+
+h3 {
+    font-family: 'Comfortaa', cursive;
+    font-style: normal;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h4 {
+    font-family: 'Comfortaa', cursive;
+    font-style: normal;
+    text-align: center;
+}
+
+.headers {
+    font-size: 24px;
+    line-height: 40px;
+}
+
+ul {
+    text-align: center;
+}
+
+p {
+    font-family: 'Comfortaa', cursive;
+    text-indent: 30px;
+    line-height: 20px;
+}
+
+.form {
+    text-indent: 0px;
+    line-height: 40px;
+}
+
+.Bios {
+    text-align: center;
+}
+
+.buttons {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    color: #00E2FF;
+    font-family: Open Sans;
+    font-size: 26px;
+    font-weight: 100;
+    padding: 15px;
+    background-color: #000000;
+    box-shadow: 1px 1px 20px 0px #000000;
+    -webkit-box-shadow: 1px 1px 20px 0px #000000;
+    -moz-box-shadow: 1px 1px 20px 0px #000000;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #00E2FF 10px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.buttons:hover {
+    padding: 10;
+    background: cornsilk;
+    border: solid #00E2FF 5px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 50px;
+    text-decoration: none;
+    text-color: #8EE66E;
+    padding: 5%;
+}
+
+.Apps {
+    text-align: center;
+    line-height: 5;
+    padding: 5;
+}
+
+.images {
+    text-align: center;
+}
+
+div#Title {
+    background-color: #10044A;
+}
+
+p#promise {
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    color: green;
+    line-height: 200%;
+    font-size: 50px;
+}
+
+div#Title {
+    text-align: center;
+}
+
+p#about_us {
+    line-height: 1.5;
+    color: #10AD4E;
+    height: 700px;
+}
+
+.background {
+    background-color: cornsilk;
+    background-size: cover;
+}
+
+.layer {
+    width: 100%;
+}
+
+.contact_info {
+    background-color: cornsilk;
+    background-size: cover;
+    down: 100px;
+}
+
+.button {
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    background: #262626;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+p#promise {
+    color: #BF8D19;
+}
+
+p#about_us {
+    color: #BF8D19;
+}
+
+/*Navbar*/
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornsilk;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li {
+    box-sizing: border-box;
+    width: 15em;
+    height: 3em;
+    font-size: 20px;
+    border-radius: 0.5em;
+    margin: 0.5em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+    color: white;
+    font-family: sans-serif;
+    line-height: 3em;
+    transition: 0.3s;
+    /*The time it takes to get into shape*/
+}
+
+/* Here is where all of the fancy stuff happens */
+ul li:nth-child(odd) {
+    background: linear-gradient(to right, orange, tomato);
+    text-align: left;
+    padding-left: 10%;
+    transform: perspective(500px) rotateY(45deg);
+}
+
+ul li:nth-child(even) {
+    background: linear-gradient(to left, orange, tomato);
+    text-align: right;
+    padding-right: 10%;
+    transform: perspective(450px) rotateY(-45deg);
+}
+
+/*
+  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
+  box-shadow: [inset?] [top] [left] [blur] [size] [color];
+
+  Tips:
+    - We're setting all the blurs to 0 since we want a solid fill.
+    - Add the inset keyword so the box-shadow is on the inside of the element
+    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
+    - Multiple shadows can be stacked
+    - If you're animating multiple shadows, be sure to keep the same number of shadows so the animation is smooth. Otherwise, you'll get something choppy.
+*/
+// Animate the size, inside
+.fill:hover,
+.fill:focus {
+    box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+// Animate the size, outside
+.pulse:hover,
+.pulse:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em rgba(#fff, 0);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--hover);
+    }
+}
+
+// Stack multiple shadows, one from the left, the other from the right
+.close:hover,
+.close:focus {
+    box-shadow:
+        inset -3.5em 0 0 0 var(--hover),
+        inset 3.5em 0 0 0 var(--hover);
+}
+
+// Size can also be negative; see how it's smaller than the element
+.raise:hover,
+.raise:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+}
+
+// Animating from the bottom
+.up:hover,
+.up:focus {
+    box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+// And from the left
+.slide:hover,
+.slide:focus {
+    box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+
+// Multiple shadows, one on the outside, another on the inside
+.offset {
+    box-shadow:
+        0.3em 0.3em 0 0 var(--color),
+        inset 0.3em 0.3em 0 0 var(--color);
+
+    &:hover,
+    &:focus {
+        box-shadow:
+            0 0 0 0 var(--hover),
+            inset 6em 3.5em 0 0 var(--hover);
+    }
+}
+
+//=== Set button colors
+// If you wonder why use Sass vars or CSS custom properties...
+// Make a map with the class names and matching colors
+$colors: (fill: #a972cb,
+    pulse: #ef6eae,
+    close: #ff7f82,
+    raise: #ffa260,
+    up: #e4cb58,
+    slide: #8fc866,
+    offset: #19bc8b);
+
+// Sass variables compile to a static string; CSS variables are dynamic and inherited
+// Loop through the map and set CSS custom properties using Sass variables
+@each $button, $color in $colors {
+    .#{$button} {
+        --color: #{$color};
+        --hover: #{adjust-hue($color, 45deg)};
+    }
+}
+
+// Now every button will have different colors as set above. We get to use the same structure, only changing the custom properties.
+button {
+    color: var(--color);
+    transition: 0.25s;
+
+    &:hover,
+    &:focus {
+        border-color: var(--hover);
+        color: #fff;
+    }
+}
+
+//=== Pen styling, ignore
+body {
+    color: #fff;
+    background: hsl(227, 10%, 10%);
+    font: 300 1em 'Fira Sans', sans-serif;
+    // Center everything ever
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+}
+
+// Basic button styles
+button {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+code {
+    color: #e4cb58;
+    font: inherit;
+}
+
+ul li:nth-child(odd):hover {
+    transform: perspective(250px) rotateY(45deg);
+    padding-left: 5%;
+}
+
+ul li:nth-child(even):hover {
+    transform: perspective(200px) rotateY(-45deg);
+    padding-right: 5%;
+}
+
+.buttons_perspective {
+    background-color: linear-gradient(to right, orange, tomato;
+    }
+
+    @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+    #hiddenInput {
+        font-size: 40px;
+        font-family: 'Roboto Condensed', sans-serif;
+        background-color: #808080;
+        position: absolute;
+        opacity: 0.4;
+        margin-top: -22px;
+        margin-left: -125px;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+
+    #container {
+        position: absolute;
+        top: 80px;
+        left: 50%;
+    }
+
+    #input {
+        position: absolute;
+        margin-top: -20px;
+        margin-left: -120px;
+    }
+
+    .letterContainer {
+        display: inline;
+        white-space: nowrap;
+    }
+
+    .letterStatic {
+        display: inline;
+    }
+
+    .letterAnimTop {
+        display: inline;
+        position: absolute;
+        -webkit-animation: dropTop .1s ease;
+        -moz-animation: dropTop .1s ease;
+    }
+
+    .letterAnimBottom {
+        display: inline;
+        position: absolute;
+        -webkit-animation: dropBottom .1s ease;
+        -moz-animation: dropBottom .1s ease;
+    }
+
+    .blink {
+        position: static;
+        top: -5px;
+        -webkit-animation: blink 0.3s ease 0 infinite alternate;
+        -moz-animation: blink 0.3s ease 0 infinite alternate;
+    }
+
+    @-moz-keyframes blink {
+        from {
+            opacity: 0
+        }
+
+        to {
+            opactiy: 1
+        }
+    }
+
+    @-webkit-keyframes blink {
+        from {
+            opacity: 0
+        }
+
+        to {
+            opactiy: 1
+        }
+    }
+
+    @-moz-keyframes dropTop {
+        from {
+            -moz-transform: translateX(0) translateY(-20px) translateZ(20px) rotateX(90deg);
+            transform: translateX(0) translateY(-20px) translateZ(20px) rotateX(90deg);
+        }
+
+        to {
+            -moz-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg);
+            transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg);
+        }
+    }
+
+    @-moz-keyframes dropBottom {
+        from {
+            -moz-transform: translateY(20px) translateZ(20px) rotateX(-90deg);
+            transform: translateY(20px) translateZ(20px) rotateX(-90deg);
+        }
+
+        to {
+            -moz-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+        }
+    }
+
+    @-webkit-keyframes dropTop {
+        from {
+            -webkit-transform: translateX(0) translateY(-20px) translateZ(20px) rotateX(90deg);
+        }
+
+        to {
+            -webkit-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg);
+        }
+    }
+
+    @-webkit-keyframes dropBottom {
+        from {
+            -webkit-transform: translateY(20px) translateZ(20px) rotateX(-90deg);
+        }
+
+        to {
+            -webkit-transform: rotateX(0deg);
+        }
+    }
+
+    /* standalone - .bttn-float */
+    .bttn-default {
+        color: #fff;
+    }
+
+    .bttn-primary,
+    .bttn,
+    .bttn-lg,
+    .bttn-md,
+    .bttn-sm,
+    .bttn-xs {
+        color: #1d89ff;
+    }
+
+    .bttn-warning {
+        color: #feab3a;
+    }
+
+    .bttn-danger {
+        color: #ff5964;
+    }
+
+    .bttn-success {
+        color: #28b78d;
+    }
+
+    .bttn-royal {
+        color: #bd2df5;
+    }
+
+    .bttn,
+    .bttn-lg,
+    .bttn-md,
+    .bttn-sm,
+    .bttn-xs {
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+        border-color: transparent;
+        background: transparent;
+        font-weight: 400;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .bttn-lg {
+        padding: 8px 15px;
+        font-size: 24px;
+        font-family: inherit;
+    }
+
+    .bttn-md {
+        font-size: 20px;
+        font-family: inherit;
+        padding: 5px 12px;
+    }
+
+    .bttn-sm {
+        padding: 4px 10px;
+        font-size: 16px;
+        font-family: inherit;
+    }
+
+    .bttn-xs {
+        padding: 3px 8px;
+        font-size: 12px;
+        font-family: inherit;
+    }
+
+    .bttn-float {
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+        border-color: transparent;
+        background: transparent;
+        font-weight: 400;
+        cursor: pointer;
+        position: relative;
+        font-size: 20px;
+        font-family: inherit;
+        padding: 5px 12px;
+        overflow: hidden;
+        border: 1px dotted #fff;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.4);
+        color: #fff;
+        -webkit-transition: opacity 0.3s cubic-bezier(0.02, 0.01, 0.47, 1), box-shadow 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), -webkit-transform 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+        transition: opacity 0.3s cubic-bezier(0.02, 0.01, 0.47, 1), box-shadow 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), -webkit-transform 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+        transition: transform 0.3s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.3s cubic-bezier(0.02, 0.01, 0.47, 1), box-shadow 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+        transition: transform 0.3s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.3s cubic-bezier(0.02, 0.01, 0.47, 1), box-shadow 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), -webkit-transform 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+    }
+
+    .bttn-float:hover,
+    .bttn-float:focus {
+        box-shadow: 0 30px 30px rgba(0, 0, 0, 0.16);
+        opacity: 0.85;
+        -webkit-transition: opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), box-shadow 0.4s cubic-bezier(0.02, 0.01, 0.47, 1), -webkit-transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+        transition: opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), box-shadow 0.4s cubic-bezier(0.02, 0.01, 0.47, 1), -webkit-transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+        transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), box-shadow 0.4s cubic-bezier(0.02, 0.01, 0.47, 1);
+        transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), box-shadow 0.4s cubic-bezier(0.02, 0.01, 0.47, 1), -webkit-transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+    }
+
+    .bttn-float.bttn-xs {
+        padding: 3px 8px;
+        font-size: 12px;
+        font-family: inherit;
+    }
+
+    .bttn-float.bttn-xs:hover,
+    .bttn-float.bttn-xs:focus {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+
+    .bttn-float.bttn-sm {
+        padding: 4px 10px;
+        font-size: 16px;
+        font-family: inherit;
+    }
+
+    .bttn-float.bttn-sm:hover,
+    .bttn-float.bttn-sm:focus {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+    }
+
+    .bttn-float.bttn-md {
+        font-size: 20px;
+        font-family: inherit;
+        padding: 5px 12px;
+    }
+
+    .bttn-float.bttn-md:hover,
+    .bttn-float.bttn-md:focus {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    .bttn-float.bttn-lg {
+        padding: 8px 15px;
+        font-size: 24px;
+        font-family: inherit;
+    }
+
+    .bttn-float.bttn-lg:hover,
+    .bttn-float.bttn-lg:focus {
+        -webkit-transform: translateY(-12px);
+        transform: translateY(-12px);
+    }
+
+    .bttn-float.bttn-default {
+        border-color: #fff;
+        background: rgba(255, 255, 255, 0.4);
+        color: #fff;
+    }
+
+    .bttn-float.bttn-primary {
+        border-color: #1d89ff;
+        background: rgba(29, 137, 255, 0.4);
+        color: #1d89ff;
+    }
+
+    .bttn-float.bttn-warning {
+        border-color: #feab3a;
+        background: rgba(254, 171, 58, 0.4);
+        color: #feab3a;
+    }
+
+    .bttn-float.bttn-danger {
+        border-color: #ff5964;
+        background: rgba(255, 89, 100, 0.4);
+        color: #ff5964;
+    }
+
+    .bttn-float.bttn-success {
+        border-color: #28b78d;
+        background: rgba(40, 183, 141, 0.4);
+        color: #28b78d;
+    }
+
+    .bttn-float.bttn-royal {
+        border-color: #bd2df5;
+        background: rgba(189, 45, 245, 0.4);
+        color: #bd2df5;
+    }
